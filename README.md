@@ -11,7 +11,7 @@ Version: 6. Bonus included.</br>
 Article about the algorithm of this project: [Push Swap in less than 4200 operations](https://medium.com/@ulysse.gerkens/push-swap-in-less-than-4200-operations-c292f034f6c0).</br>
 
 ## 🚀 Benchmark
-Perform on 10000 random sample of 500 numbers.</br>
+Perform on 10000 random samples of 500 numbers.</br>
 Worst = 3871 instructions</br>
 Average = 3784 instructions</br>
 Best = 3680 instructions</br>
@@ -31,7 +31,7 @@ Cf. [/push_swap_docs.md](https://github.com/ulyssegerkens/push_swap/blob/main/pu
 [/illustrations/push_swap_flowchart.svg](https://github.com/ulyssegerkens/push_swap/blob/main/illustrations/push_swap_flowchart.svg)
 
 ## 📋 Testing
-Tested by 42 students (125%) and mention as an outstanding project 🎉. 
+Tested by 42 students (125%) and mentioned as an outstanding project 🎉. 
 
 ## ✨ Illustrations
 https://github.com/ulyssegerkens/push_swap/assets/99326326/77c80f0d-5759-4849-b321-d4f5506d3351
