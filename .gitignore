@@ -1,0 +1,6 @@
+.DS_Store
+build/
+lib/libft/obj/
+*.a
+*.o
+push_swap
