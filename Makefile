@@ -12,7 +12,7 @@
 
 # Variables
 CC					=	gcc
-CFLAGS				=	-Wall -Wextra -Werror -Iinclude -Isrc -Ofast
+CFLAGS				=	-Wall -Wextra -Werror -Iinclude -Isrc -O3
 RM					=	rm -rf
 CHECKER				=	checker
 PUSH_SWAP			=	push_swap
@@ -49,18 +49,18 @@ all:				$(PUSH_SWAP)
 
 bonus:				$(CHECKER)
 
-obj:
-					mkdir -p obj
+build:
+					mkdir -p build
 
 LIB					=	$(LIBFT_FILE) $(FT_PRINTF_FILE)
-PUSH_SWAP_OBJ		=	$(PUSH_SWAP_SRC:%.c=obj/push_swap/%.o)
-CHECKER_OBJ			= 	$(CHECKER_SRC:%.c=obj/checker/%.o)
+PUSH_SWAP_OBJ		=	$(PUSH_SWAP_SRC:%.c=build/push_swap/%.o)
+CHECKER_OBJ			= 	$(CHECKER_SRC:%.c=build/checker/%.o)
 
-$(PUSH_SWAP_OBJ):	obj/push_swap/%.o: %.c $(PUSH_SWAP_INC)
+$(PUSH_SWAP_OBJ):	build/push_swap/%.o: %.c $(PUSH_SWAP_INC)
 					@mkdir -p $(dir $@)
 					$(CC) $(CFLAGS) -c $< -o $@
 
-$(CHECKER_OBJ):		obj/checker/%.o: %.c $(CHECKER_INC)
+$(CHECKER_OBJ):		build/checker/%.o: %.c $(CHECKER_INC)
 					@mkdir -p $(dir $@)
 					$(CC) $(CFLAGS) -c $< -o $@
 
@@ -84,7 +84,7 @@ lib_fclean:
 					$(MAKE_LIB) $(FT_PRINTF_DIR) fclean
 
 clean:				lib_clean
-					$(RM) obj
+					$(RM) build
 
 fclean:				clean lib_fclean
 					$(RM) $(NAME)
